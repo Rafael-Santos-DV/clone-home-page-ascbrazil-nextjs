@@ -53,7 +53,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body className="mobile-active">
+        <body className="header-sidebar">
           <Main />
           <NextScript />
         </body>

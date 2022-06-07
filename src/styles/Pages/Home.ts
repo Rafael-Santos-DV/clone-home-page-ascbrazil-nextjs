@@ -33,17 +33,18 @@ export const BoxHeader = styled.div`
     display: none;
   }
 
-  /* @media only screen and (max-width: 990px) {
+  @media only screen and (max-width: 990px) {
     .menu-mobile {
       display: block;
     }
-  } */
+  }
 `;
 
 export const Navigation = styled.nav<{ isMobile: boolean }>`
   display: flex;
 
-  /* @media only screen and (max-width: 990px) {
+  @media only screen and (max-width: 990px) {
+    display: ${(props) => (props.isMobile ? 'flex' : 'none')};
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
@@ -53,7 +54,18 @@ export const Navigation = styled.nav<{ isMobile: boolean }>`
     bottom: 0;
     top: 0;
     height: 100vh;
-  } */
+    z-index: 9999;
+    animation: sidebar-animation 200ms ease;
+
+    @keyframes sidebar-animation {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
 `;
 
 export const BoxLinks = styled.div`
@@ -77,13 +89,17 @@ export const BoxLinks = styled.div`
   @media only screen and (max-width: 990px) {
     flex-direction: column;
     gap: 20px;
-    padding-top: 50px;
+    padding-top: 10px;
     width: 100%;
 
     a,
     .data-list {
       font-size: 1.2rem;
       color: #fff;
+    }
+
+    .hover-links a {
+      color: #000;
     }
 
     span.exit {
@@ -93,7 +109,7 @@ export const BoxLinks = styled.div`
       font-weight: bold;
       justify-content: right;
       color: #fff;
-      padding: 0 40px;
+      padding: 0 30px;
     }
   }
 `;
@@ -238,6 +254,13 @@ export const ArticleTitle = styled.article`
 
     > div {
       max-width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 770px) {
+    h1 {
+      display: inline;
+      font-size: 2rem;
     }
   }
 `;

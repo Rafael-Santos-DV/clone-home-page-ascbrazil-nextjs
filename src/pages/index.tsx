@@ -45,7 +45,21 @@ import hamburger from '../assets/barra.svg';
 import bannerMobile from '../assets/banner-mobile.png';
 
 const Home: React.FC<NextPage> = () => {
-  const [isMobile, setMobile] = useState(true);
+  const [isMobile, setMobile] = useState(false);
+
+  const handleClickNavigationMobile = () => {
+    const headerOverflow = document.querySelector('.header-sidebar');
+
+    if (!isMobile) {
+      headerOverflow?.classList.add('mobile-active');
+      setMobile((prev) => !prev);
+      return;
+    }
+
+    headerOverflow?.classList.remove('mobile-active');
+
+    setMobile((prev) => !prev);
+  };
 
   return (
     <Container>
@@ -61,10 +75,19 @@ const Home: React.FC<NextPage> = () => {
               <img src={logo.src} id="logo" alt="Logo" />
             </a>
           </Link>
-          <img src={hamburger.src} alt="Menu" className="menu-mobile" />
+          <img
+            src={hamburger.src}
+            alt="Menu"
+            className="menu-mobile"
+            onClick={handleClickNavigationMobile}
+          />
           <Navigation isMobile={isMobile}>
             <BoxLinks>
-              {isMobile && <span className="exit">X</span>}
+              {isMobile && (
+                <span className="exit" onClick={handleClickNavigationMobile}>
+                  X
+                </span>
+              )}
               <Link href="/">
                 <a>ASC SAC</a>
               </Link>

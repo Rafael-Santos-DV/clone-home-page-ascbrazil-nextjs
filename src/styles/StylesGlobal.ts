@@ -14,4 +14,12 @@ export const StylesGlobal = createGlobalStyle`
       height: 100vh;
     }
 
+
+    @media only screen and (max-width: 990px) {
+      .mobile-active {
+        overflow: hidden;
+      }
+    }
+
+
 `;
