@@ -71,7 +71,7 @@ import Petrobras from '../assets/Petrobras-logo.png';
 import Sarah from '../assets/Sarah.png';
 import Tribanco from '../assets/Tribanco.png';
 
-import ascSolucoes from '../assets/solucoes.png';
+import ascSolucoes from '../assets/soluctions.png';
 import { CardFeedback } from '../components/CardFeedback/CardFeedback';
 
 // feedback people

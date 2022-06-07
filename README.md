@@ -1,5 +1,5 @@
 # setup for nextjs and typescript
 
 ```
-   libs: next-images and inline-react-svg
+   git clone https://github.com/Rafael-Santos-DV/clone-home-page-ascbrazil-nextjs.git
 ```
