@@ -167,12 +167,29 @@ export const SectionContent = styled.section`
   @media only screen and (max-width: 980px) {
     padding: 10px;
   }
+
+  @media only screen and (max-width: 568px) {
+    padding: 0px;
+  }
 `;
 
 export const ArticleBanner = styled.article`
   img {
     width: 100%;
     max-width: 850px;
+
+    &.banner-mobile {
+      display: none;
+    }
+
+    @media only screen and (max-width: 568px) {
+      &.banner-desktop {
+        display: none;
+      }
+      &.banner-mobile {
+        display: block;
+      }
+    }
   }
 `;
 
@@ -184,6 +201,10 @@ export const Content = styled.div`
 
   @media only screen and (max-width: 980px) {
     grid-template-columns: 1fr;
+  }
+
+  @media only screen and (max-width: 568px) {
+    padding: 10px;
   }
 `;
 
@@ -209,6 +230,7 @@ export const ArticleTitle = styled.article`
   @media only screen and (max-width: 980px) {
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     h1 {
       display: none;
@@ -294,19 +316,28 @@ export const BoxForm = styled.div`
   @media only screen and (max-width: 980px) {
     width: 100%;
     max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    padding: 5px;
 
     input,
     button,
     select {
-      padding: 8px;
-      width: 47%;
+      &:focus {
+        border: none;
+        box-shadow: none;
+        outline: 2px solid ${(props) => props.theme.colors.orangeDark};
+      }
+    }
+  }
+
+  @media only screen and (max-width: 445px) {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    input[name='name'] {
+      width: 100%;
     }
 
-    input[name='name'],
-    button {
-      width: 98%;
+    input[name='email'],
+    input[name='tel'],
+    select {
     }
   }
 `;
@@ -323,8 +354,8 @@ export const ContainerCheckerBox = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     overflow: hidden;
     background-color: #fff;
     border: none;
@@ -338,8 +369,8 @@ export const ContainerCheckerBox = styled.div`
         position: absolute;
         left: 0;
         top: 0;
-        width: 8px;
-        height: 15px;
+        width: 6px;
+        height: 10px;
         display: inline-block;
         border-bottom: 4px solid #fff;
         border-right: 4px solid #fff;

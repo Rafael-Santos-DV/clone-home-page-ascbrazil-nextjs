@@ -42,6 +42,7 @@ import sofia from '../assets/sofia.png';
 import { useState } from 'react';
 
 import hamburger from '../assets/barra.svg';
+import bannerMobile from '../assets/banner-mobile.png';
 
 const Home: React.FC<NextPage> = () => {
   const [isMobile, setMobile] = useState(true);
@@ -124,7 +125,16 @@ const Home: React.FC<NextPage> = () => {
           <ArticleBanner>
             <Link href="/">
               <a>
-                <img src={banner.src} alt="Banner Atendimento" />
+                <img
+                  src={banner.src}
+                  alt="Atendimento Whatsapp"
+                  className="banner-desktop"
+                />
+                <img
+                  src={bannerMobile.src}
+                  alt="Atendimento Whatsapp"
+                  className="banner-mobile"
+                />
               </a>
             </Link>
           </ArticleBanner>

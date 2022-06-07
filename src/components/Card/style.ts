@@ -20,4 +20,18 @@ export const BoxCard = styled.div`
   &:hover {
     transform: scale(1.03);
   }
+
+  @media only screen and (max-width: 990px) {
+    padding: 20px;
+    gap: 10px;
+
+    img {
+      max-width: 35px;
+      padding-top: 15px;
+    }
+
+    span {
+      font-size: 0.9rem;
+    }
+  }
 `;
