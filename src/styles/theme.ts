@@ -9,6 +9,7 @@ const theme = {
     yellowOrange: '#FFBA00',
     orangeDark: '#ffa600',
     blueBlack: '#0F4C81',
+    footer: '#656565',
   },
 };
 

@@ -43,6 +43,10 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <meta
+            name="author"
+            content="Rafael Santos - https://rafaelsantos-dev.neflify.app"
+          />
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"

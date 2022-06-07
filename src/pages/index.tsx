@@ -11,6 +11,8 @@ import {
   BoxImage,
   BoxLanguages,
   BoxLinks,
+  BoxNav,
+  BoxPolicy,
   BoxProfileSofia,
   BoxRegister,
   BoxTalk,
@@ -22,13 +24,17 @@ import {
   ContainerCompany,
   ContainerFeed,
   ContainerForm,
+  ContainerSocialNetwork,
   Content,
   ContentLinks,
   ContentSofia,
   DataList,
+  Footer,
   Header,
   MaxContent,
   Navigation,
+  NavigationFooter,
+  NaviHeader,
   SectionCompanies,
   SectionContent,
   SectionFeed,
@@ -40,6 +46,7 @@ import {
   SectionWhoIsSofia,
 } from '../styles/Pages/Home';
 import logo from '../assets/logo.svg';
+import logoWhite from '../assets/logobranca.png';
 import Link from 'next/link';
 import { ButtonComponent } from '../components/Button/Button';
 
@@ -77,6 +84,11 @@ import microsoft from '../assets/microsoft.png';
 import facebook from '../assets/facebook.png';
 
 import call from '../assets/contato.png';
+
+// social network icons
+import facebookIcon from '../assets/facebook-icon.svg';
+import instagramIcon from '../assets/instagram-icon.svg';
+import linkedinIcon from '../assets/Linkedin-icon.svg';
 
 const Home: React.FC<NextPage> = () => {
   const [isMobile, setMobile] = useState(false);
@@ -506,6 +518,68 @@ const Home: React.FC<NextPage> = () => {
           <img src={call.src} alt="Contato" />
         </BoxImage>
       </SectionInfoTalk>
+      <Footer>
+        <NavigationFooter>
+          <NaviHeader>
+            <Link href="/">
+              <a>
+                <img src={logoWhite.src} id="logo" alt="Logo" />
+              </a>
+            </Link>
+
+            <BoxNav>
+              <Link href="/">
+                <a>ASC SAC</a>
+              </Link>
+              <Link href="/">
+                <a>Blog</a>
+              </Link>
+              <Link href="/">
+                <a>Área do cliente</a>
+              </Link>
+              <Link href="/">
+                <a>Trabalhe Conosco</a>
+              </Link>
+            </BoxNav>
+          </NaviHeader>
+
+          <ContainerSocialNetwork>
+            <Link href="/">
+              <a>
+                <img src={facebookIcon.src} alt="Facebook" />
+              </a>
+            </Link>
+            <Link href="/">
+              <a>
+                <img src={instagramIcon.src} alt="Instagram" />
+              </a>
+            </Link>
+            <Link href="/">
+              <a>
+                <img src={linkedinIcon.src} alt="Linkedin" />
+              </a>
+            </Link>
+          </ContainerSocialNetwork>
+          <BoxPolicy>
+            <div>
+              <Link href="/">
+                <a>Canal LGPD</a>
+              </Link>
+              <Link href="/">
+                <a>Política de privacidade</a>
+              </Link>
+              <Link href="/">
+                <a>Política de cookies</a>
+              </Link>
+              <Link href="/">
+                <a>Termos de uso</a>
+              </Link>
+            </div>
+
+            <span>Copyright 2020 © ASC Brazil</span>
+          </BoxPolicy>
+        </NavigationFooter>
+      </Footer>
     </Container>
   );
 };
