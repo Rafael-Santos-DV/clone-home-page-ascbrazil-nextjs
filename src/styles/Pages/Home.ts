@@ -632,3 +632,89 @@ export const ContentSofia = styled.article`
     }
   }
 `;
+
+export const SectionCompanies = styled.section`
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  h2 {
+    font-size: 1.8rem;
+    padding: 10px 15px;
+    font-weight: 400;
+  }
+`;
+
+export const Company = styled.div`
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+
+  &.animation-desktop {
+    display: flex;
+  }
+
+  &.animation-mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: 990px) {
+    gap: 300px;
+  }
+
+  @media only screen and (max-width: 568px) {
+    gap: 0px;
+    &.animation-mobile {
+      display: flex;
+    }
+
+    &.animation-desktop {
+      display: none;
+    }
+  }
+`;
+
+export const ContainerCompany = styled.div`
+  flex-wrap: nowrap;
+
+  min-width: 100%;
+
+  animation: animation-company 3s ease infinite;
+  animation-delay: 2s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: 990px) {
+    img {
+      max-width: 180px;
+    }
+  }
+
+  @media only screen and (max-width: 445px) {
+    img {
+      max-width: 160px;
+    }
+  }
+
+  @keyframes animation-company {
+    0% {
+      transform: translateX(0%);
+    }
+    /* 50% {
+      transform: translateX(-50%);
+    } */
+
+    100% {
+      display: none;
+      transform: translate(-100%);
+    }
+  }
+`;

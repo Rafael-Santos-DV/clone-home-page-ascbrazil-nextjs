@@ -9,9 +9,11 @@ import {
   BoxLanguages,
   BoxLinks,
   BoxProfileSofia,
+  Company,
   Container,
   ContainerBenefits,
   ContainerCheckerBox,
+  ContainerCompany,
   ContainerFeed,
   ContainerForm,
   Content,
@@ -21,6 +23,7 @@ import {
   Header,
   MaxContent,
   Navigation,
+  SectionCompanies,
   SectionContent,
   SectionFeed,
   SectionWhoIsSofia,
@@ -43,6 +46,12 @@ import { useState } from 'react';
 
 import hamburger from '../assets/barra.svg';
 import bannerMobile from '../assets/banner-mobile.png';
+
+// companies images
+import martins from '../assets/Martins.png';
+import Petrobras from '../assets/Petrobras-logo.png';
+import Sarah from '../assets/Sarah.png';
+import Tribanco from '../assets/Tribanco.png';
 
 const Home: React.FC<NextPage> = () => {
   const [isMobile, setMobile] = useState(false);
@@ -305,6 +314,68 @@ const Home: React.FC<NextPage> = () => {
           </ButtonComponent>
         </ContentSofia>
       </SectionWhoIsSofia>
+
+      <SectionCompanies>
+        <h2>Empresas que confiam em nós</h2>
+
+        <Company className="animation-desktop">
+          {/* desktop */}
+          <ContainerCompany>
+            <img src={martins.src} alt="Martins" />
+            <img src={Petrobras.src} alt="Petrobras" />
+            <img src={Sarah.src} alt="Sarah" />
+            <img src={Tribanco.src} alt="Tribanco" />
+            <img src={Tribanco.src} alt="Tribanco" />
+          </ContainerCompany>
+          <ContainerCompany>
+            <img src={martins.src} alt="Martins" />
+            <img src={Petrobras.src} alt="Petrobras" />
+            <img src={Sarah.src} alt="Sarah" />
+            <img src={Tribanco.src} alt="Tribanco" />
+            <img src={Tribanco.src} alt="Tribanco" />
+          </ContainerCompany>
+
+          <ContainerCompany>
+            <img src={martins.src} alt="Martins" />
+            <img src={Petrobras.src} alt="Petrobras" />
+            <img src={Sarah.src} alt="Sarah" />
+            <img src={Tribanco.src} alt="Tribanco" />
+            <img src={Tribanco.src} alt="Tribanco" />
+          </ContainerCompany>
+        </Company>
+
+        <Company className="animation-mobile">
+          {/* mobile */}
+
+          <ContainerCompany>
+            <img src={martins.src} alt="Martins" />
+            <img src={Petrobras.src} alt="Petrobras" />
+          </ContainerCompany>
+          <ContainerCompany>
+            <img src={martins.src} alt="Martins" />
+            <img src={Petrobras.src} alt="Petrobras" />
+          </ContainerCompany>
+
+          <ContainerCompany>
+            <img src={martins.src} alt="Martins" />
+            <img src={Petrobras.src} alt="Petrobras" />
+          </ContainerCompany>
+
+          <ContainerCompany>
+            <img src={martins.src} alt="Martins" />
+            <img src={Petrobras.src} alt="Petrobras" />
+          </ContainerCompany>
+          <ContainerCompany>
+            <img src={martins.src} alt="Martins" />
+            <img src={Petrobras.src} alt="Petrobras" />
+          </ContainerCompany>
+
+          <ContainerCompany>
+            <img src={martins.src} alt="Martins" />
+            <img src={Petrobras.src} alt="Petrobras" />
+          </ContainerCompany>
+        </Company>
+      </SectionCompanies>
     </Container>
   );
 };
