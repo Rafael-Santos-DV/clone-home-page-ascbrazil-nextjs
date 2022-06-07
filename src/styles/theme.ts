@@ -8,6 +8,7 @@ const theme = {
     cinza: '#F2F2F2',
     yellowOrange: '#FFBA00',
     orangeDark: '#ffa600',
+    blueBlack: '#0F4C81',
   },
 };
 

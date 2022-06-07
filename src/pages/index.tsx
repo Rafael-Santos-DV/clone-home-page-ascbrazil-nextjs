@@ -2,8 +2,10 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import {
   ArticleBanner,
+  ArticlePleasure,
   ArticleTitle,
   ArticleWhat,
+  BoxFeedBack,
   BoxForm,
   BoxHeader,
   BoxLanguages,
@@ -26,6 +28,8 @@ import {
   SectionCompanies,
   SectionContent,
   SectionFeed,
+  SectionFeedback,
+  SectionPleasure,
   SectionWhoIsSofia,
 } from '../styles/Pages/Home';
 import logo from '../assets/logo.svg';
@@ -52,6 +56,12 @@ import martins from '../assets/Martins.png';
 import Petrobras from '../assets/Petrobras-logo.png';
 import Sarah from '../assets/Sarah.png';
 import Tribanco from '../assets/Tribanco.png';
+
+import ascSolucoes from '../assets/solucoes.png';
+import { CardFeedback } from '../components/CardFeedback/CardFeedback';
+
+// feedback people
+import ronaldoSilva from '../assets/Ronaldo-Silva.png';
 
 const Home: React.FC<NextPage> = () => {
   const [isMobile, setMobile] = useState(false);
@@ -376,6 +386,68 @@ const Home: React.FC<NextPage> = () => {
           </ContainerCompany>
         </Company>
       </SectionCompanies>
+
+      <SectionPleasure>
+        <article>
+          <img src={ascSolucoes.src} alt="ASC Brazil Soluções" />
+        </article>
+        <ArticlePleasure>
+          <h2>Prazer, ASC Brazil</h2>
+          <p>
+            Somos uma empresa 100% brasileira, que desenvolve e comercializa
+            soluções de atendimento voltadas a médias e grandes empresas, de
+            diversos segmentos.
+          </p>
+          <p>
+            Nosso objetivo é otimizar os processos e reduzir os custos dos
+            nossos clientes.
+          </p>
+          <p>
+            <strong>MISSÃO</strong> - Ajudar as empresas do mundo a inovar e
+            evoluir na experiência de atendimento ao cliente.
+          </p>
+          <p>
+            <strong>VISÃO</strong> – Ser referência mundial em soluções de
+            Atendimento Digital.
+          </p>
+          <p>
+            <strong>VALORES</strong> Ética e Respeito; Empreendedorismo e
+            Inovação; Compromisso e Transparência; Qualidade nos processos;
+            Investimento em Talentos; Responsabilidade Social.
+          </p>
+
+          <ButtonComponent>Fale com um consultor</ButtonComponent>
+        </ArticlePleasure>
+      </SectionPleasure>
+      <SectionFeedback>
+        <h2>Depoimentos de quem conhece</h2>
+
+        <BoxFeedBack>
+          <CardFeedback
+            avatar={ronaldoSilva.src}
+            author="Ronaldo Silva"
+            charge="Administração de Telemarketing BV Financeira"
+            content="A ASC Brazil, através de sua solução ASC SAC, consegue nos entregar uma interface amigável e ainda nos possibilita a divulgação da nossa marca. Otimizamos nosso tempo com recursos como armazenamento e histórico das conversas, além de podermos atender mais de um cliente de forma simultânea."
+            description="Interface amigável e otimização de tempo"
+          />
+
+          <CardFeedback
+            avatar={ronaldoSilva.src}
+            author="Ronaldo Silva"
+            charge="Administração de Telemarketing BV Financeira"
+            content="A ASC Brazil, através de sua solução ASC SAC, consegue nos entregar uma interface amigável e ainda nos possibilita a divulgação da nossa marca. Otimizamos nosso tempo com recursos como armazenamento e histórico das conversas, além de podermos atender mais de um cliente de forma simultânea."
+            description="Interface amigável e otimização de tempo"
+          />
+
+          <CardFeedback
+            avatar={ronaldoSilva.src}
+            author="Ronaldo Silva"
+            charge="Administração de Telemarketing BV Financeira"
+            content="A ASC Brazil, através de sua solução ASC SAC, consegue nos entregar uma interface amigável e ainda nos possibilita a divulgação da nossa marca. Otimizamos nosso tempo com recursos como armazenamento e histórico das conversas, além de podermos atender mais de um cliente de forma simultânea."
+            description="Interface amigável e otimização de tempo"
+          />
+        </BoxFeedBack>
+      </SectionFeedback>
     </Container>
   );
 };
