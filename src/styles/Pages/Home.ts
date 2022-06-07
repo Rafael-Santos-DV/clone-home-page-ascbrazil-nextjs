@@ -726,18 +726,38 @@ export const SectionPleasure = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 120px 0;
-  column-gap: 120px;
+  gap: 40px;
 
   article {
     width: 100%;
 
     img {
       width: 100%;
-      max-height: 400px;
+      min-height: 500px;
       object-fit: cover;
       object-position: right;
       border-top-right-radius: 40px;
       border-bottom-right-radius: 40px;
+    }
+  }
+
+  @media only screen and (max-width: 990px) {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 40px;
+
+    > article {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 100%;
+        min-height: auto;
+        border-radius: 40px;
+      }
     }
   }
 `;
@@ -806,6 +826,217 @@ export const BoxFeedBack = styled.div`
   @media only screen and (max-width: 990px) {
     > article {
       max-width: 100%;
+    }
+  }
+`;
+
+export const SectionPartners = styled.section`
+  max-width: 100%;
+  width: 100%;
+  background-color: ${(props) => props.theme.colors.cinza};
+  text-align: center;
+  padding: 30px 0;
+
+  > h2 {
+    padding: 50px 0;
+    font-size: 2rem;
+  }
+`;
+
+export const ContainerCompanies = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+
+  > img {
+    max-width: 120px;
+    filter: contrast(0.01);
+  }
+`;
+
+export const SectionSubscribedBlob = styled.section`
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 80px 0;
+
+  gap: 10px;
+
+  div {
+    width: 100%;
+    text-align: center;
+    line-height: 2;
+    padding: 10px;
+
+    > h2 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+`;
+
+export const BoxRegister = styled.form`
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 600px;
+  gap: 5%;
+  padding: 10px;
+
+  input,
+  button {
+    flex: 45%;
+    padding: 15px;
+    transition: transform 200ms ease;
+    border: none;
+
+    &::placeholder {
+      text-align: center;
+    }
+
+    border-radius: 5px;
+
+    &:focus {
+      transform: scale(1.02);
+    }
+  }
+
+  input {
+    background-color: ${(props) => props.theme.colors.cinza};
+    margin-bottom: 8px;
+  }
+
+  button {
+    margin-top: 10px;
+  }
+
+  button[type='submit'] {
+    background-color: ${(props) => props.theme.colors.yellowOrange};
+  }
+  button[type='button'] {
+    border: 1px solid ${(props) => props.theme.colors.yellowOrange};
+    transition: background 200ms ease, transform 200ms ease;
+
+    a {
+      color: ${(props) => props.theme.colors.yellowOrange};
+    }
+
+    &:hover {
+      background-color: ${(props) => props.theme.colors.orangeDark};
+      transform: scale(1.1);
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+`;
+
+export const SectionInfoTalk = styled.section`
+  margin-top: 100px;
+  width: 100%;
+  background-color: ${(props) => props.theme.colors.cinza};
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media only screen and (max-width: 990px) {
+    grid-template-columns: 1fr;
+
+    > article {
+      &:nth-of-type(1) {
+        order: 2;
+      }
+    }
+  }
+`;
+
+export const BoxTalk = styled.article`
+  display: flex;
+  align-items: center;
+
+  div {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 1.5;
+
+    button {
+      background-color: ${(props) => props.theme.colors.yellowOrange};
+      border: none;
+      max-width: 250px;
+      color: ${(props) => props.theme.colors.backgroundButton};
+      padding: 15px 10px;
+      border-radius: 8px;
+      transition: transform 200ms ease;
+      text-transform: none;
+      font-size: 0.95rem;
+
+      &:hover {
+        transform: scale(1.05);
+        background-color: ${(props) => props.theme.colors.orangeDark};
+      }
+    }
+
+    @media only screen and (max-width: 990px) {
+      text-align: center;
+      padding: 10px;
+
+      button {
+        max-width: 100%;
+      }
+    }
+
+    strong {
+      font-size: 1.8rem;
+    }
+
+    span {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+  }
+`;
+export const BoxImage = styled.article`
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  img {
+    width: 100%;
+    position: relative;
+    top: -100px;
+    right: -25px;
+    border-radius: 20px;
+    z-index: 99;
+    max-width: 900px;
+    max-height: 900px;
+  }
+
+  @media only screen and (max-width: 990px) {
+    justify-content: center;
+    max-height: auto;
+    padding: 10px;
+
+    img {
+      position: static;
     }
   }
 `;

@@ -8,13 +8,17 @@ import {
   BoxFeedBack,
   BoxForm,
   BoxHeader,
+  BoxImage,
   BoxLanguages,
   BoxLinks,
   BoxProfileSofia,
+  BoxRegister,
+  BoxTalk,
   Company,
   Container,
   ContainerBenefits,
   ContainerCheckerBox,
+  ContainerCompanies,
   ContainerCompany,
   ContainerFeed,
   ContainerForm,
@@ -29,7 +33,10 @@ import {
   SectionContent,
   SectionFeed,
   SectionFeedback,
+  SectionInfoTalk,
+  SectionPartners,
   SectionPleasure,
+  SectionSubscribedBlob,
   SectionWhoIsSofia,
 } from '../styles/Pages/Home';
 import logo from '../assets/logo.svg';
@@ -62,6 +69,14 @@ import { CardFeedback } from '../components/CardFeedback/CardFeedback';
 
 // feedback people
 import ronaldoSilva from '../assets/Ronaldo-Silva.png';
+
+// partners
+import amazon from '../assets/Amazon.png';
+import google from '../assets/Google.png';
+import microsoft from '../assets/microsoft.png';
+import facebook from '../assets/facebook.png';
+
+import call from '../assets/contato.png';
 
 const Home: React.FC<NextPage> = () => {
   const [isMobile, setMobile] = useState(false);
@@ -448,6 +463,49 @@ const Home: React.FC<NextPage> = () => {
           />
         </BoxFeedBack>
       </SectionFeedback>
+
+      <SectionPartners>
+        <h2>Parceiros</h2>
+        <ContainerCompanies>
+          <img src={amazon.src} alt="Amazon" />
+          <img src={google.src} alt="Google" />
+          <img src={facebook.src} alt="Facebook" />
+          <img src={microsoft.src} alt="Microsoft" />
+          <img src={google.src} alt="Google" />
+          <img src={facebook.src} alt="Facebook" />
+          <img src={microsoft.src} alt="Microsoft" />
+        </ContainerCompanies>
+      </SectionPartners>
+      <SectionSubscribedBlob>
+        <div>
+          <h2>Conhecimento nunca é demais</h2>
+          <p>Cadastre-se e receba conteúdos exclusivos do nosso blog</p>
+        </div>
+        <BoxRegister>
+          <input type="text" name="name" placeholder="Seu nome*" />
+          <input type="email" name="email" placeholder="Seu e-mail*" />
+          <ButtonComponent type="button">
+            <Link href="">
+              <a>Acessar Blog</a>
+            </Link>
+          </ButtonComponent>
+          <ButtonComponent type="submit">Cadastrar</ButtonComponent>
+        </BoxRegister>
+      </SectionSubscribedBlob>
+
+      <SectionInfoTalk>
+        <BoxTalk>
+          <div>
+            <strong>Chegou a hora de oferecer a melhor experiência</strong>
+            <span>Vamos conversar?</span>
+            <ButtonComponent>Fale com um consultor</ButtonComponent>
+          </div>
+        </BoxTalk>
+
+        <BoxImage>
+          <img src={call.src} alt="Contato" />
+        </BoxImage>
+      </SectionInfoTalk>
     </Container>
   );
 };

@@ -12,10 +12,16 @@ export const StylesGlobal = createGlobalStyle`
     html, body {
       width: 100%;
       height: 100vh;
+      overflow-x: hidden;
     }
 
 
     @media only screen and (max-width: 990px) {
+
+      html, body {
+        overflow: auto;
+      }
+
       .mobile-active {
         overflow: hidden;
       }
