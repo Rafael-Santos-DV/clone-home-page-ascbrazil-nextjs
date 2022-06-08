@@ -946,7 +946,7 @@ export const BoxRegister = styled.form`
     }
   }
 
-  @media only screen and (max-width: 405px) {
+  @media only screen and (max-width: 768px) {
     input[type='email'] {
       flex: 100%;
     }
