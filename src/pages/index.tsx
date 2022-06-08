@@ -87,7 +87,7 @@ import call from '../assets/contato.png';
 
 // social network icons
 import facebookIcon from '../assets/facebook-icon.svg';
-import instagramIcon from '../assets/instagramicon.svg';
+import instagramIcon from '../assets/instagram-icon.png';
 import linkedinIcon from '../assets/Linkedin-icon.svg';
 
 const Home: React.FC<NextPage> = () => {
