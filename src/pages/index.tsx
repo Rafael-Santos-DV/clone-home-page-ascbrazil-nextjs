@@ -87,7 +87,7 @@ import call from '../assets/contato.png';
 
 // social network icons
 import facebookIcon from '../assets/facebook-icon.svg';
-import instagramIcon from '../assets/instagram-icon.svg';
+// import instagramIcon from '../assets/instagram-icon.svg';
 import linkedinIcon from '../assets/Linkedin-icon.svg';
 
 const Home: React.FC<NextPage> = () => {
@@ -549,11 +549,11 @@ const Home: React.FC<NextPage> = () => {
                 <img src={facebookIcon.src} alt="Facebook" />
               </a>
             </Link>
-            <Link href="/">
+            {/* <Link href="/">
               <a>
                 <img src={instagramIcon.src} alt="Instagram" />
               </a>
-            </Link>
+            </Link> */}
             <Link href="/">
               <a>
                 <img src={linkedinIcon.src} alt="Linkedin" />
